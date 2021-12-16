@@ -5,7 +5,7 @@ app_title = "Thirvu Soft"
 app_publisher = "Gokul"
 app_description = "erp solution"
 app_icon = "octicon octicon-file-directory"
-app_color = "grey"
+app_color = "red"
 app_email = "gokul@gmail.com"
 app_license = "MIT"
 

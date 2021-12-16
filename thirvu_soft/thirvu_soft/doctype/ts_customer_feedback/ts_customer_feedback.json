@@ -1,0 +1,76 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:ts_customer_name",
+ "creation": "2021-12-06 16:27:08.972909",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "ts_customer_name",
+  "ts_company_name",
+  "ts_company_no",
+  "ts_rating",
+  "ts_comments"
+ ],
+ "fields": [
+  {
+   "fieldname": "ts_customer_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "ts_company_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Company Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "ts_company_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Company Register No",
+   "reqd": 1
+  },
+  {
+   "fieldname": "ts_rating",
+   "fieldtype": "Rating",
+   "in_list_view": 1,
+   "label": "Overall Rating",
+   "reqd": 1
+  },
+  {
+   "fieldname": "ts_comments",
+   "fieldtype": "Rating",
+   "label": "Employee Rating",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-12-16 09:42:29.004178",
+ "modified_by": "Administrator",
+ "module": "Thirvu Soft",
+ "name": "TS Customer_Feedback",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}
