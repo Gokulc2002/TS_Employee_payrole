@@ -1,0 +1,51 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2021-12-16 12:32:17.205145",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [
+  {
+   "fieldname": "start",
+   "fieldtype": "Date",
+   "label": "Start Date",
+   "mandatory": 1,
+   "wildcard_filter": 0
+  },
+  {
+   "fieldname": "end",
+   "fieldtype": "Date",
+   "label": "End date",
+   "mandatory": 1,
+   "wildcard_filter": 0
+  }
+ ],
+ "idx": 0,
+ "is_standard": "Yes",
+ "modified": "2021-12-17 12:28:56.279929",
+ "modified_by": "Administrator",
+ "module": "Thirvu Soft",
+ "name": "pay_slip",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "select\n    emp_id as \"EMP ID\",\n    emp_name as \"NAME\",\n    emp_role as \"ROLE\",\n    basic_pay as \"Basic Pay:Currency\",\n    da as \"Daily Allowence - 100/day\",\n    absent_days as \"Absent Days\",\n    datediff(last_date, start_date)-absent_days as \"Total Present Days\",\n    (da*100)+(basic_pay-absent_days*300)-((basic_pay*8.5)/100) as \"Final Pay:Currency:150\"\n    \nFROM\n    `tabemployee_payroll`\nwhere start_date = %(start)s\n      and last_date < %(end)s;\n\n    ",
+ "ref_doctype": "Salary Slip",
+ "report_name": "pay_slip",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "HR Manager"
+  },
+  {
+   "role": "Employee"
+  },
+  {
+   "role": "HR User"
+  },
+  {
+   "role": "Employee Self Service"
+  }
+ ]
+}
